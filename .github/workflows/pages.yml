@@ -31,8 +31,8 @@ jobs:
       - name: Build playground-docs
         working-directory: playground
         run:  |
-        yarn install --frozen-lockfile
-        yarn build
+          yarn install --frozen-lockfile
+          yarn build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
