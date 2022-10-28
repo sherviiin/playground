@@ -26,7 +26,7 @@ jobs:
           cache-dependency-path: playground-docs/package-lock.json
 
       - name: Build playground-docs
-        working-directory: playground
+#        working-directory: playground
         run: |
           yarn install --frozen-lockfile
           yarn build
