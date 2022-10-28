@@ -12,7 +12,6 @@ on:
 #  run:
 #    working-directory: docs
 
-
 jobs:
   deploy:
     name: Deploy to GitHub Pages
