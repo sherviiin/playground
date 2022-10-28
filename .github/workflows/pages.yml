@@ -23,10 +23,10 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-          cache-dependency-path: playground-docs/package-lock.json
+          cache-dependency-path: docs/playground-docs/package-lock.json
 
       - name: Build playground-docs
-        working-directory: playground-docs
+        working-directory: docs/playground-docs
         run: |
           yarn install --frozen-lockfile
           yarn build
