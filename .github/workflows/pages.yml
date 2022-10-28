@@ -29,7 +29,7 @@ jobs:
 
       - name: Build playground-docs
         working-directory: playground
-        run:  |
+        run: |
           yarn install --frozen-lockfile
           yarn build
 
