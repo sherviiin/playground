@@ -28,11 +28,11 @@ jobs:
           cache: yarn
           cache-dependency-path: playground-docs/package-lock.json
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
       - name: Build playground-docs
-        working-directory: playground-docs
-        run: yarn build
+        working-directory: playground
+        run: |
+        yarn install --frozen-lockfile
+        yarn build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
@@ -41,7 +41,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
+          publish_dir: ./playground-docs/build
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
